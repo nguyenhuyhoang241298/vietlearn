@@ -13,5 +13,5 @@ const useSessionStore = create<SessionState>((set) => ({
 }))
 
 export const useSessionUser = () => useSessionStore((s) => s.userName)
-export const useSessionActions = () =>
-  useSessionStore((s) => ({ signIn: s.signIn, signOut: s.signOut }))
+export const useSignIn = () => useSessionStore((s) => s.signIn)
+export const useSignOut = () => useSessionStore((s) => s.signOut)

@@ -24,4 +24,4 @@ src/
 
 Quy ước: alias `@/*` trỏ vào `src/*`; server state nằm trong TanStack Query, Zustand chỉ giữ client state (trong segment `model`); chỉ tách `features/`, `entities/`, `widgets/` khi code thực sự được dùng lại ở nhiều nơi.
 
-shadcn/ui chưa được khởi tạo; khi cần chạy `pnpm dlx shadcn@latest init` và trỏ alias `ui` về `@/shared/ui`.
+shadcn/ui: component nằm ở `src/shared/ui` (alias trong `components.json`: `ui` → `@/shared/ui`, `utils` → `@/shared/lib/utils`). Thêm component mới bằng `pnpm dlx shadcn@latest add <tên>`; import qua public API `@/shared/ui`.
