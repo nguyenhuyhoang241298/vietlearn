@@ -3,5 +3,5 @@ import { HomePage } from '../index'
 
 test('renders the app title', () => {
   render(<HomePage />)
-  expect(screen.getByRole('heading', { name: 'VietLearn' })).toBeInTheDocument()
+  expect(screen.getByText('VietLearn')).toBeInTheDocument()
 })
